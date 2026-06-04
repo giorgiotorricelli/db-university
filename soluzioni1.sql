@@ -34,3 +34,8 @@ WHERE `date` = "2020-06-20" AND `hour` > '14:00:00';
 SELECT *
 FROM `degrees`
 WHERE `level` = 'magistrale';
+
+--soluzione 7
+
+SELECT count(*)
+FROM `departments`;
