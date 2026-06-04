@@ -60,3 +60,10 @@ ORDER BY `vote` DESC;
 SELECT *
 FROM `students`
 WHERE (`name` = 'lidia' OR `name` = 'antonio') AND timestampdiff(year, `date_of_birth`, curdate()) < 35;
+
+-- tutti gli insegnanti con nome che finisce per 'a' e cognome per 'b' che non hanno phone registrato o numero italiano
+
+SELECT *
+FROM `teachers`
+WHERE `name` LIKE '%a' AND `surname` LIKE '%i' AND (`phone` NOT LIKE '+39%' OR `phone` IS NULL)
+ORDER BY cast(`office_number` as UNSIGNED) ASC;
