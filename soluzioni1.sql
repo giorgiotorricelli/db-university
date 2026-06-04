@@ -54,3 +54,9 @@ SELECT *
 FROM `exam_student`
 WHERE `vote` > 30
 ORDER BY `vote` DESC;
+
+-- gli studenti di nome antonio o lidia che hanno meno di 35 anni
+
+SELECT *
+FROM `students`
+WHERE (`name` = 'lidia' OR `name` = 'antonio') AND timestampdiff(year, `date_of_birth`, curdate()) < 35;
