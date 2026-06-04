@@ -45,3 +45,12 @@ FROM `departments`;
 SELECT *
 FROM `teachers`
 WHERE `phone` IS NULL;
+
+-- soluzioni bonus
+
+-- gli esami con voto più alto di 30
+
+SELECT *
+FROM `exam_student`
+WHERE `vote` > 30
+ORDER BY `vote` DESC;
