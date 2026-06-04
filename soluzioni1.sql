@@ -16,3 +16,9 @@ SELECT *
 FROM `students`
 WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, CURDATE()) > 30
 ORDER BY `date_of_birth` DESC;
+
+-- soluzione 4
+
+SELECT *
+FROM `courses`
+WHERE `period` LIKE "I %" AND `year` = 1;
