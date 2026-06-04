@@ -39,3 +39,9 @@ WHERE `level` = 'magistrale';
 
 SELECT count(*)
 FROM `departments`;
+
+-- soluzione 8
+
+SELECT *
+FROM `teachers`
+WHERE `phone` IS NULL;
