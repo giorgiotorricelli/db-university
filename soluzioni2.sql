@@ -18,3 +18,8 @@ FROM (
     GROUP BY office_address
     HAVING COUNT(*) > 1
 ) AS uffici_filtrati;
+
+-- TERZA SOLUZIONE
+
+SELECT AVG(vote)
+FROM exam_student;
