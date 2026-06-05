@@ -47,3 +47,13 @@ FROM degrees
 JOIN departments AS d
 ON department_id = d.id
 WHERE d.name LIKE 'Dipartimento di Neuroscienze';
+
+-- terza soluzione
+
+SELECT c.id, c.description
+FROM teachers
+JOIN course_teacher AS ct
+ON ct.teacher_id = teachers.id
+JOIN courses AS c
+ON c.id = ct.course_id
+WHERE teachers.id LIKE 44;
