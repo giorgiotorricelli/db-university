@@ -39,3 +39,11 @@ FROM students
 JOIN degrees AS d
 ON degree_id = d.id
 HAVING d.name LIKE 'Corso di Laurea in Economia';
+
+-- seconda soluzione
+
+SELECT *
+FROM degrees
+JOIN departments AS d
+ON department_id = d.id
+WHERE d.name LIKE 'Dipartimento di Neuroscienze';
