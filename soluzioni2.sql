@@ -57,3 +57,13 @@ ON ct.teacher_id = teachers.id
 JOIN courses AS c
 ON c.id = ct.course_id
 WHERE teachers.id LIKE 44;
+
+-- quarta soluzione
+
+SELECT s.name, s.surname, d.* ,dep.*
+FROM students AS s
+JOIN degrees AS d
+ON d.id = s.degree_id
+JOIN departments AS dep
+ON d.department_id = dep.id
+ORDER BY s.name, s.surname;
