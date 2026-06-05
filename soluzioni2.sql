@@ -29,3 +29,13 @@ FROM exam_student;
 SELECT COUNT(id) AS degrees_count, department_id
 FROM degrees
 GROUP BY department_id;
+
+-- secondo foglio di query
+
+-- prima soluzione
+
+SELECT *
+FROM students
+JOIN degrees AS d
+ON degree_id = d.id
+HAVING d.name LIKE 'Corso di Laurea in Economia';
