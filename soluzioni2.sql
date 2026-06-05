@@ -67,3 +67,15 @@ ON d.id = s.degree_id
 JOIN departments AS dep
 ON d.department_id = dep.id
 ORDER BY s.name, s.surname;
+
+-- quinta soluzione
+
+SELECT *
+FROM degrees AS d
+JOIN courses AS c
+ON d.id = c.degree_id
+JOIN course_teacher AS ct
+ON c.id = ct.course_id
+JOIN teachers AS t
+ON t.id = ct.teacher_id
+LIMIT 184467440737;
