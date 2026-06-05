@@ -79,3 +79,18 @@ ON c.id = ct.course_id
 JOIN teachers AS t
 ON t.id = ct.teacher_id
 LIMIT 184467440737;
+
+-- sesta soluzione
+
+SELECT DISTINCT t.*
+FROM teachers AS t
+JOIN course_teacher AS ct
+ON t.id = ct.teacher_id
+JOIN courses AS c
+ON c.id = ct.course_id
+JOIN degrees AS d
+ON d.id = c.degree_id
+JOIN departments AS dep
+ON dep.id = d.department_id
+WHERE dep.name LIKE 'Dipartimento di Matematica'
+LIMIT 184467440737;
