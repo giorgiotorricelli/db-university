@@ -23,3 +23,9 @@ FROM (
 
 SELECT AVG(vote)
 FROM exam_student;
+
+-- quarta soluzione
+
+SELECT COUNT(id) AS degrees_count, department_id
+FROM degrees
+GROUP BY department_id;
